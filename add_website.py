@@ -13,19 +13,22 @@ def create_password():
         if add_data.lower() == 'save':
             break
         new_data.append(add_data)
-    print("Your news informations:", new_data)
+    print("[INFO] Your news informations:", new_data)
 
 create_password()
 
 
 def store_password():
-    new_storage = input("do you want to save new_data in main_storage? ('y' or 'no'):\n")
+    new_storage = input("Do you want to save new_data in main_storage? ('y' or 'no'):\n")
     if new_storage.lower() == 'y':
         main_storage.append(new_data)
-        print("data has been saved in main_storage", main_storage)
+        print("[INFO] Data has been saved in main_storage", main_storage)
     
     if not new_storage.lower() == 'y':
-        print("Nothing was saved.")
+        print("[INFO] Nothing was saved.")
+
+    new_data.clear()
+    print("[INFO] New_data has been clear", new_data)
 
 store_password()
 
